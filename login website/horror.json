@@ -1,0 +1,54 @@
+{
+    "horros":[
+        {
+            "id":"1",
+            "url":"https://m.media-amazon.com/images/I/91+CQNeCtwL._AC_UF1000,1000_QL80_.jpg",
+            "price":"523",
+            "name":"The tels",
+            "discound":"10%"
+           
+        },
+        {
+            "id":"2",
+            "url":"https://m.media-amazon.com/images/I/A1zss66lTcL._AC_UF1000,1000_QL80_.jpg",
+            "price":"965",
+            "discound":"10%",
+            "name":"101 horror"
+           
+            
+        },
+        {
+            "id":"3",
+            "url":"https://m.media-amazon.com/images/I/51IzeRM6KkL.jpg",
+            "price":"230",
+            "discound":"10%",
+            "name":"The part of night"
+            
+        },
+        {
+            "id":"4",
+            "url":"https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1652098416-41MCeOCPTrL._SL500_.jpg?crop=1xw:1xh;center,top&resize=980:*",
+            "price":"630",
+            "discound":"10%",          
+            "name":"black ome"
+            
+        },
+        {
+            "id":"5",
+            "url":"https://m.media-amazon.com/images/I/71uTbAOpdZL._AC_UF1000,1000_QL80_.jpg",
+            "price":"920",
+            "discound":"10%",         
+            "name":"horres of night"
+            
+        },
+        {
+            "id":"6",
+            "url":"https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1669061771-best-horror-books-last-house-needless-1669061707.jpg?crop=1xw:0.98671875xh;center,top&resize=980:*",
+            "price":"367",
+            "discound":"10%",
+            "name":"the last house"
+          
+            
+        }
+    ]
+}

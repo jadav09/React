@@ -1,0 +1,54 @@
+{
+    "poetry":[
+        {
+            "id":"1",
+            "url":"https://m.media-amazon.com/images/I/41CVtQ6NehL.jpg",
+            "price":"523",
+            "name":"The tels",
+            "discound":"10%"
+           
+        },
+        {
+            "id":"2",
+            "url":"https://www.bookbaby.com/images/cover-genre/poetry-raven.jpg",
+            "price":"965",
+            "discound":"10%",
+            "name":"101 horror"
+           
+            
+        },
+        {
+            "id":"3",
+            "url":"https://www.tedkooser.net/images/book_covers/cottoncandy.jpg",
+            "price":"230",
+            "discound":"10%",
+            "name":"The part of night"
+            
+        },
+        {
+            "id":"4",
+            "url":"https://cdn.kobo.com/book-images/f52b1b41-90a3-450b-b427-fe57e57352b8/1200/1200/False/petals-of-healing-a-poetry-book-for-women-about-self-love-and-healing-from-toxic-relationships.jpg",
+            "price":"630",
+            "discound":"10%",          
+            "name":"black ome"
+            
+        },
+        {
+            "id":"5",
+            "url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ55mN2e5GH3vt8jWByD3DeIW7vsDb249p9vHZxA1Qd8ysQev0gwNZJBvfPMDtUo-G6rs&usqp=CAU",
+            "price":"920",
+            "discound":"10%",         
+            "name":"horres of night"
+            
+        },
+        {
+            "id":"6",
+            "url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuslJK2ZVHCB2xvhj01CYnCTBx16WIZ0rl7M6_i3c1TWdtzQruIlJxgWiPy9H2FiaRRBE&usqp=CAU",
+            "price":"367",
+            "discound":"10%",
+            "name":"the last house"
+          
+            
+        }
+    ]
+}

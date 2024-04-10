@@ -1,0 +1,54 @@
+{
+    "fantasy":[
+        {
+            "id":"1",
+            "url":"https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1646849115-41oigHHgNAL._SL500_.jpg?crop=1xw:1xh;center,top&resize=980:*",
+            "price":"523",
+            "name":"The tels",
+            "discound":"10%"
+           
+        },
+        {
+            "id":"2",
+            "url":"https://assets-eu-01.kc-usercontent.com/bcd02f72-b50c-0179-8b4b-5e44f5340bd4/55a17355-6adc-49fa-b154-5f6971c09a1e/0007299265.01._SCLZZZZZZZ_SX500_.jpg?w=270&h=415&auto=format&bg=%23efefef&fit=crop",
+            "price":"965",
+            "discound":"10%",
+            "name":"101 horror"
+           
+            
+        },
+        {
+            "id":"3",
+            "url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1ZGCtAhXVj03stoMTFqehZZh-d2upzU9x9gUsR9GIgAS36xQUou8YX1LSAIvtUXBF9UI&usqp=CAU",
+            "price":"230",
+            "discound":"10%",
+            "name":"The part of night"
+            
+        },
+        {
+            "id":"4",
+            "url":"https://media.npr.org/assets/img/2021/08/16/81laymbisll_custom-6686a26e308c6eda3094f407041d7e0bd6f2bc29-s800-c85.jpeg",
+            "price":"630",
+            "discound":"10%",          
+            "name":"black ome"
+            
+        },
+        {
+            "id":"5",
+            "url":"https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1694023787-710fTv1xhL.jpg?crop=1xw:1xh;center,top&resize=980:*",
+            "price":"920",
+            "discound":"10%",         
+            "name":"horres of night"
+            
+        },
+        {
+            "id":"6",
+            "url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLIgEzjp_rJB4UpYa58M3Scn2SX0_Z14Sn7QnwBRjNSo1AQ-VjEOyaZpWNtE9mTNgSr8o&usqp=CAU",
+            "price":"367",
+            "discound":"10%",
+            "name":"the last house"
+          
+            
+        }
+    ]
+}

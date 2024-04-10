@@ -1,0 +1,28 @@
+.App {
+  text-align: center;
+}
+
+#img1
+{
+  height: 450px;
+  object-fit: cover;
+}
+
+.card
+{
+  cursor: pointer;
+}
+
+.ftr
+{
+  margin-top: 100px;
+  
+}
+.sec
+{
+  background: url("https://media.istockphoto.com/id/1453644131/photo/us-letter-softcover-book-cover-white-blank-mockup.jpg?s=1024x1024&w=is&k=20&c=wrO9HnMLVKTo8RGt--cBuNNPZ8pTHnJ7VD3d7Diq7NI=");
+  background-size: cover;
+  background-position: 100% 100%;
+}
+
+

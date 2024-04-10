@@ -1,0 +1,44 @@
+{
+  "details": [
+    {
+      "firstname": "jadav",
+      "lastname": "dharmesh",
+      "email": "jadav@gmail.com",
+      "phone": "8980909",
+      "password": "123456789",
+      "id": "99b1"
+    },
+    {
+      "firstname": "jadav2",
+      "lastname": "dharmesh2",
+      "email": "dh@gmail.com",
+      "phone": "8980909",
+      "password": "123456789",
+      "id": "21d5"
+    },
+    {
+      "id": "4db8",
+      "fname": "dtgret",
+      "lname": "asdaf",
+      "email": "jadav009@gmail.com",
+      "phone": "sdf",
+      "pass": "adsff"
+    },
+    {
+      "id": "2d1a",
+      "fname": "dfg",
+      "lname": "asdf",
+      "email": "afsd@gmail.com",
+      "phone": "asdf",
+      "pass": "adf"
+    },
+    {
+      "id": "39df",
+      "fname": "dfg",
+      "lname": "asdf",
+      "email": "afs1d@gmail.com",
+      "phone": "asdf",
+      "pass": "adf"
+    }
+  ]
+}
