@@ -1,20 +1,28 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Button } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
+import { Userlogin } from './App'
+
+
+import { Bounce, ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Login() {
 
     let [email, setemail] = useState("")
     let [password, setpassword] = useState("")
 
-    let nav = useNavigate()
+    let { setloginname, setlogoutuser } = useContext(Userlogin)
 
+    console.log(setloginname)
+
+    let nav = useNavigate()
 
     let hendlesumbit = (e) => {
 
         e.preventDefault()
 
-        fetch("http://localhost:4001/details")
+        fetch("http://localhost:4003/login")
             .then((res) => { return res.json() })
             .then((op) => {
 
@@ -23,12 +31,12 @@ function Login() {
                 })
 
                 console.log(filtermail)
+                setloginname(filtermail)
 
                 let filterpasword = op.find((v) => {
                     return v.password == password
 
                 })
-
 
                 if (email.length == "" || password.length == "") {
                     alert("required!!")
@@ -43,17 +51,30 @@ function Login() {
                 }
 
                 else if (filtermail && filterpasword) {
-                    alert("login succesfullly...")
-                    nav("/")
+
+                    toast.success('login succesfullly...!', {
+                        position: "top-center",
+                        autoClose: 5000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "light",
+                        transition: Bounce,
+                        });
+
+                        setTimeout(() => {
+                            nav("/")
+                        }, 3000);
+                    
+                    setlogoutuser(false)
 
                 }
 
             })
 
-
-
     }
-
 
     return (
         <div>
@@ -119,6 +140,7 @@ function Login() {
                     </div>
                 </div>
             </section>
+            <ToastContainer/>
 
         </div>
     )

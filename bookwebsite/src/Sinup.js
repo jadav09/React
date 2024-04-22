@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
+import { Bounce, ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Sinup() {
 
@@ -8,13 +10,13 @@ function Sinup() {
   let nav = useNavigate()
 
 
-  let [fname, setfname] = useState("")
-  let [lname, setlname] = useState("")
+  let [firstname, setfname] = useState("")
+  let [lastname, setlname] = useState("")
   let [email, setemail] = useState("")
   let [phone, setphone] = useState("")
-  let [pass, setpass] = useState("")
+  let [password, setpass] = useState("")
 
-  let data = { fname, lname, email, phone, pass }
+  let data = { firstname, lastname, email, phone, password }
 
 
   useEffect(() => {
@@ -26,11 +28,11 @@ function Sinup() {
 
     e.preventDefault()
 
-    if (fname.length == "" || lname.length == "" || email.length == "" || phone.length == "" || pass.length == "") {
+    if (firstname.length == "" || lastname.length == "" || email.length == "" || phone.length == "" || password.length == "") {
       return alert("Required!!!!")
     }
 
-    fetch("http://localhost:4001/details")
+    fetch("http://localhost:4003/login")  
     .then((res)=>{return res.json()})
     .then((op)=>{
 
@@ -48,14 +50,28 @@ function Sinup() {
      else if(!compar)
 
      {
-      fetch("http://localhost:4001/details", {
+      fetch("http://localhost:4003/login", {
         method: "post",
         headers: { "content-type": "applicaion/json" },
         body: JSON.stringify(data)
       })
 
-      alert("registration successfully...")
-      nav("/")
+      toast.success(' registration successfully...!', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+        });
+
+        setTimeout(() => {
+            nav("/")
+        }, 3000);
+
     }
 
     })
@@ -98,7 +114,7 @@ function Sinup() {
                           <div className="form-outline">
                             <label className="form-label" >First name</label>
                             <input type="text" className="form-control"
-                              value={fname}
+                              value={firstname}
                               onChange={(e) => { setfname(e.target.value) }}
                             />
                           </div>
@@ -110,7 +126,7 @@ function Sinup() {
                           <div className="form-outline">
                             <label className="form-label">Last name</label>
                             <input type="text" className="form-control"
-                              value={lname}
+                              value={lastname}
                               onChange={(e) => { setlname(e.target.value) }}
                             />
                           </div>
@@ -139,7 +155,7 @@ function Sinup() {
                       <div className="form-outline mb-3">
                         <label className="form-label" >Password</label>
                         <input type="password" className="form-control"
-                          value={pass}
+                          value={password}
                           onChange={(e) => { setpass(e.target.value) }}
                         />
                       </div>
@@ -181,6 +197,7 @@ function Sinup() {
         </div>
 
       </section>
+      <ToastContainer/>
 
     </div>
   )
