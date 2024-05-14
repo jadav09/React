@@ -1,0 +1,70 @@
+.App {
+  text-align: center;
+ 
+}
+
+.wallpaper:hover{
+  background: url("https://plus.unsplash.com/premium_photo-1676422355165-d809008b8342?q=80&w=1599&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  background-size: cover;
+  transition: 10s;
+}
+
+#img1
+{
+  height: 450px;
+  object-fit: cover;
+}
+
+.card
+{
+  cursor: pointer;
+}
+
+.ftr
+{
+  margin-top: 100px;
+}
+
+.sec
+{
+  background: url("https://media.istockphoto.com/id/1453644131/photo/us-letter-softcover-book-cover-white-blank-mockup.jpg?s=1024x1024&w=is&k=20&c=wrO9HnMLVKTo8RGt--cBuNNPZ8pTHnJ7VD3d7Diq7NI=");
+  background-size: cover;
+  background-position: 100% 100%;
+}
+
+.catagories
+{
+  background-color: white;
+}
+
+.style
+{
+  box-shadow: 10px -10px 50px black ;
+}
+
+.style1
+{
+  box-shadow: 1px -1px 10px black ;
+}
+
+.style:hover,
+.style1:hover
+
+{
+  background-color: wheat;
+
+}
+
+.imgscl:hover
+{
+  transform: scale(1.5);
+  transition: 0.5s;
+}
+
+.hdn
+{
+  overflow: hidden;
+}
+

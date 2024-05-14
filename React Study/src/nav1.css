@@ -1,0 +1,21 @@
+.navbar *
+
+{
+border: 2px solid black ;
+text-align: center;
+}
+
+ul li
+{
+    list-style-type: none;
+    display: inline;
+    padding: 0px 30px;
+    color: red;
+}
+
+table
+
+{
+    margin: 10px  auto;
+}
+
