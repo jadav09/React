@@ -8,7 +8,7 @@ const Ary = [
   { name: "Apple", id: 1 },
   { name: "Banana", id: 2 },
   { name: "Kivi", id: 3 }
-  
+
 ]
 
 
@@ -34,7 +34,7 @@ function App() {
 
     // console.log(cng)
     setobj(
-      obj.map((v) => {  
+      obj.map((v) => {
         // console.log(v)
 
         if (v.id == cng.id) {
@@ -50,12 +50,12 @@ function App() {
     )
 
   }
-  
-  const ondlthndl=(nextid)=>{
+
+  const ondlthndl = (nextid) => {
 
     setobj(
 
-      obj.filter((v)=>{
+      obj.filter((v) => {
 
         console.log(v)
 
@@ -73,7 +73,7 @@ function App() {
       <Task
         onEditx={obj}
         onchgy={onchghndl}
-      ondltz={ondlthndl}
+        ondltz={ondlthndl}
       />
     </>
   )

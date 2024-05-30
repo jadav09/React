@@ -1,58 +1,58 @@
 import { useState } from "react"
 
-function Task({onEditx,onchgy,ondltz}) {
+function Task({ onEditx, onchgy, ondltz }) {
     return (
         <>
-       {onEditx.map((v)=>{
+            {onEditx.map((v) => {
 
-        return(
+                return (
 
-            <ul key={v.id}>
-            <li>
-            <SaveEditDelete
-            onEdit={v}
-            oncng={onchgy}
-            ondlt={ondltz}
-             /> 
-             </li>
-            
+                    <ul key={v.id}>
+                        <li>
+                            <SaveEditDelete
+                                onEdit={v}
+                                oncng={onchgy}
+                                ondlt={ondltz}
+                            />
+                        </li>
 
-            </ul>
-        )
-       })}
 
-           
+                    </ul>
+                )
+            })}
+
+
         </>
     )
 }
 
-function SaveEditDelete({onEdit,oncng,ondlt}) {
+function SaveEditDelete({ onEdit, oncng, ondlt }) {
 
     let [clk, setclk] = useState(false)
 
     if (clk) {
-      var   prnt =
+        var prnt =
             <>
-                <input type="" name="" value={onEdit.name} onChange={(e)=>{
+                <input type="" name="" value={onEdit.name} onChange={(e) => {
                     oncng({
                         ...onEdit,
-                        name:e.target.value
+                        name: e.target.value
                     })
-                }}/>
+                }} />
 
                 <button onClick={() => { setclk(false) }}>Save</button>
             </>
 
     }
- 
+
     else {
 
-        prnt=
-        <>
-    {onEdit.name}
-        
-         <button onClick={() => { setclk(true) }}>Edit</button>
-        </>
+        prnt =
+            <>
+                {onEdit.name}
+
+                <button onClick={() => { setclk(true) }}>Edit</button>
+            </>
 
     }
 
@@ -62,8 +62,8 @@ function SaveEditDelete({onEdit,oncng,ondlt}) {
 
             {prnt}
 
-            <button onClick={()=>{
-                {ondlt(onEdit.id)}
+            <button onClick={() => {
+                { ondlt(onEdit.id) }
             }}>Delete</button>
 
         </div>
