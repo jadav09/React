@@ -7,6 +7,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { useNavigate } from 'react-router-dom';
 import { Userlogin } from './App';
+import { Bounce, ToastContainer, toast } from 'react-toastify';
 
 function Nav1() {
 
@@ -33,7 +34,18 @@ function Nav1() {
 
     if(logoutuser)
     {
-      return alert("login first")
+      return toast.warn(' please logIn first', {
+        position: "top-center",
+        autoClose: 2500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+      });
+      // return alert("login first")
     }
     nav("/addtocart")
 
@@ -77,7 +89,7 @@ function Nav1() {
             
 
               </NavDropdown>
-              <button onClick={hendlecart} className='btn btn-warning fw-bold ms-5'><Nav.Link>
+              <button onClick={hendlecart} className='btn btn-warning fw-bold'><Nav.Link>
               <i className="fa-solid fa-cart-shopping fs-5 px-1"></i>
                 My cart</Nav.Link></button>
 
@@ -104,6 +116,8 @@ function Nav1() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
+
+      <ToastContainer/>
 
     </div>
   )

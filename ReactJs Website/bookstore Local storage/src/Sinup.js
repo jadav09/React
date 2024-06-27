@@ -17,14 +17,27 @@ function Sinup() {
   let data = { firstname, lastname, email, phone, password }
 
 
-  var singup = JSON.parse(localStorage.getItem("regi")) ?? []
+  var singup = JSON.parse(localStorage.getItem("regi2")) ?? []
+
+  console.log(singup)
 
   let hendlesumbit = (e) => {
 
     e.preventDefault()
 
     if (firstname.length == "" || lastname.length == "" || email.length == "" || phone.length == "" || password.length == "") {
-      return alert("Required!!!!")
+ 
+     return toast.warn(' Required please', {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+      });
     }
 
     var chkdata = singup.find((v) => {
@@ -49,7 +62,7 @@ function Sinup() {
 
     else {
       singup.push(data)
-      localStorage.setItem("regi", JSON.stringify(singup))
+      localStorage.setItem("regi2", JSON.stringify(singup))
 
       toast.success(' registration successfully...!', {
         position: "top-center",

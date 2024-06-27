@@ -22,7 +22,7 @@ function Login() {
 
         e.preventDefault()
 
-        var singup = JSON.parse(localStorage.getItem("regi")) ?? []
+        var singup = JSON.parse(localStorage.getItem("regi2")) ?? []
 
         var chkemail = singup.find((v) => {
             return v.email == email
@@ -39,15 +39,46 @@ function Login() {
         console.log(chkpass)
 
         if (email.length == "" || password.length == "") {
-            alert("required!!")
+            return toast.warn('please required', {
+                position: "top-center",
+                autoClose: 2500,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                transition: Bounce,
+              });
         }
 
         else if (!chkemail) {
-            alert("wrong email")
+           
+            return toast.warn('wrong email', {
+                position: "top-center",
+                autoClose: 2500,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                transition: Bounce,
+              });
         }
 
         else if (!chkpass) {
-            alert("wrong password")
+            return toast.warn('wrong password', {
+                position: "top-center",
+                autoClose: 2500,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                transition: Bounce,
+              });
         }
 
         else if (chkpass) {
