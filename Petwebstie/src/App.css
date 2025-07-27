@@ -1,0 +1,307 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--fontChilanka);
+  transition: 0.33s ease-in;
+}
+
+:root {
+  --fontChilanka: Chilanka;
+  --fontMonst: Montserrat;
+  --unit8:8px;
+  --unit16: 16px;
+  --primaryblack: #41403e;
+  --primarycolor: #dead6f;
+  --white:#ffffff;
+  --unit400: 400;
+  --unit100: 100px;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+a {
+  margin: 0;
+  padding: 0;
+}
+
+
+h1 {
+  font-size: 80px;
+  text-transform: capitalize;
+}
+
+h2 {
+  font-size: 64px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4
+{
+  font-size:24px ;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 16px;
+  font-family: var(--fontChilanka);
+  word-break: break-word;
+}
+
+a {
+  font-size: 16px;
+  color: var(--primaryblack);
+  text-decoration: none;
+}
+
+
+
+/* .header-navbar*/
+
+.header {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 32px 0px;
+
+}
+
+.header .header-logo {
+  width: 22%;
+}
+
+.header .search {
+  width: 42%;
+  display: flex;
+  align-items: center;
+}
+
+
+.header .contact-number {
+  width: 35%;
+  display: flex;
+  gap: 30px;
+  text-align: end;
+}
+
+.header .contact-number p {
+  font-family: var(--fontMonst);
+  color: #212529BF;
+  padding-bottom: 8px;
+}
+
+.header .search input {
+  height: 60px;
+  font-size: var(--unit16);
+}
+
+.header .search svg {
+  position: relative;
+  left: -40px;
+}
+
+.header .contact-number h5 {
+  word-break: break-word
+}
+
+.header .header-logo img {
+  width: 200px;
+}
+
+.header-content-wrap .navbar .container-fluid {
+  display: unset;
+}
+
+.navbar-nav .nav-item .nav-link
+{
+  padding-right: 30px ;
+}
+
+.header-content-wrap .navbar .nav-icon a
+{
+  padding-right: 30px;
+  cursor: pointer;
+
+}
+
+.header-content-wrap .container-fluid
+{
+  border-top: 1px solid #d4d4d4;
+  /* margin:0px 24px; */
+  /* margin-right: 100px; */
+}
+.offcanvas-header
+{
+  justify-content: center;
+}
+
+.offcanvas-header .btn-close
+{
+  margin: auto;
+}
+
+/* custom-button */
+
+.custom-button
+{
+    padding: 20px 50px;
+    display: flex;
+    border: 1px solid;
+    border-radius:8px;
+    text-transform: uppercase;
+}
+
+.custom-button
+{
+  display: flex;
+  align-items: center;
+  background-color: var(--white);
+  border-color: var(--primaryblack);
+
+}
+
+.custom-button i
+{
+margin-left: 5px;
+}
+
+a:hover .custom-button
+{
+  background-color: var(--primaryblack);
+  border-color: var(--primaryblack);
+
+}
+
+a:hover .custom-button
+{
+  color: var(--white);
+  border-color: var(--primaryblack);
+}
+
+a:hover .custom-button i
+{
+color:var(--white);
+}
+
+
+/* swipper */
+
+.swiper-main
+{
+  background-color: #F9F3EC;
+  padding-top: var(--unit100);
+}
+
+span.swiper-pagination-bullet {
+    height: 20px;
+    width: 20px;
+    background: transparent;
+    border: 1px solid;
+    margin: 10px;
+}
+
+span.swiper-pagination-bullet-active
+{
+  background-color: var(--primaryblack);
+}
+
+.swiper-detail-wrap .swiper-img img
+{
+  width: 100%;
+}
+
+.swiper-detail-wrap .row
+{
+  justify-content: space-between;
+}
+.swiper-detail-wrap .swiper-content
+{
+padding-top: var(--unit100);
+}
+
+
+.swiper-content .discount-text
+{
+  color: rgba(222, 173, 111,1);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.swiper-content h1 span
+{
+  color: var(--primarycolor);
+}
+
+.swiper-detail-wrap.Clearancebanner{
+  margin-top: var(--unit100);
+  background: #F9F3EC;
+}
+
+.swiper-detail-wrap.Clearancebanner .swiper-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: revert;
+}
+/* card-wrap */
+
+.card-wrap{
+  margin-top: var(--unit100);
+}
+
+.svg-wrap
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.card-wrap .row
+{
+  justify-content: space-between;
+}
+
+.card-wrap svg
+{
+  height: 100px;
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+
+/* pet-images-wrap */
+
+.pet-images-wrap
+{
+  display: flex;
+  justify-content: space-between;
+  /* flex-wrap: wrap; */
+  margin-top: var(--unit100);
+}
+
+.pet-images-wrap .pet-images-box
+{
+  width: 16%;
+  border-radius: var(--unit16);
+  width: 100%;
+}
+
+.pet-images-wrap .pet-images-box img
+{
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--unit16);
+  /* border-radius: var(--unit16); */
+  /* width: 100%; */
+}
