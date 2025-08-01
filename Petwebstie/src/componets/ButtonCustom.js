@@ -1,10 +1,10 @@
 import React from 'react'
 
-function ButtonCustom() {
+function ButtonCustom({ Button_Name, handleclick }) {
   return (
-    <button className='custom-button'>
-       <p> Shop now</p>
-            <i class="fa-solid fa-arrow-right"></i>
+    <button className='custom-button' onClick={handleclick}>
+      <p> {Button_Name}</p>
+      <i className="fa-solid fa-arrow-right"></i>
     </button>
   )
 }

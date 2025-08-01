@@ -12,9 +12,11 @@ function Clearancebanner() {
                     <div className='col-md-6 swiper-content'>
                         <div>
                             <h4 className='discount-text'>Upto 40% off</h4>
-                            <h1>Clearance <h1>sale !!!</h1> </h1>
+                            <h1>Clearance <span>sale !!!</span> </h1>
                             <a href="">
-                                 <ButtonCustom/>
+                                 <ButtonCustom 
+                                 Button_Name={"Shop Now"}
+                                 />
                             </a>
                         </div>
                     </div>

@@ -1,8 +1,30 @@
+@media screen and (max-width:1366px) {
+    h1 {
+        font-size: 62px;
+    }
+}
 
-@media screen and (min-width:992px)
-{
-    .header-content-wrap .navbar-expand-lg .offcanvas .offcanvas-body
-    {
+@media screen and (max-width:1024px) {
+
+    h1 {
+        font-size: 42px;
+    }
+
+    .warranty-card-wrap .warranty-content {
+        width: 50%;
+        margin-top: 30px;
+
+    }
+
+    .foooter-wrapper .footer-wrap-section .footer-section {
+        width: 50%;
+        margin-top: 50px;
+
+    }
+}
+
+@media screen and (min-width:992px) {
+    .header-content-wrap .navbar-expand-lg .offcanvas .offcanvas-body {
         justify-content: space-between !important;
         align-items: center !important;
     }
@@ -10,50 +32,69 @@
 
 }
 
-@media screen and (max-width:992px)
-{
-    .header-content-wrap .navbar .container-fluid
-    {
-        display:unset;
+@media screen and (max-width:992px) {
+    .header-content-wrap .navbar .container-fluid {
+        display: unset;
     }
 
-    .header-content-wrap .navbar-toggler
-    {
+    .header-content-wrap .navbar-toggler {
         float: right;
     }
-    .header-content-wrap .d-lg-none{
+
+    .header-content-wrap .d-lg-none {
         float: left;
     }
 
-    .header-content-wrap .header
-    {
+    .header-content-wrap .header {
         justify-content: space-between;
     }
-    .header-content-wrap .contact-number
-    {
-        display: none;;
+
+    .header-content-wrap .contact-number {
+        display: none;
+        ;
     }
-    .header-content-wrap .header .search
-    {
+
+    .header-content-wrap .header .search {
         width: 60%;
     }
-    .offcanvas-body .nav-icon
-    {
+
+    .offcanvas-body .nav-icon {
         display: none;
     }
 
 
 }
 
-@media screen and (max-width:767px)
-{
-    .header-content-wrap .header .search
+@media screen and (max-width:767px) {
+
+    .swiper-detail-wrap .swiper-content
     {
+        padding-bottom: 50px;
+
+    }
+
+    .swiper-detail-wrap.Clearancebanner
+    {
+        padding: 50px 0px;
+    }
+    .header-content-wrap .header .search {
         display: none;
     }
-     .header-content-wrap .header .header-logo
-    {
+
+    .header-content-wrap .header .header-logo {
         width: 100%;
         text-align: center;
+    }
+
+    .warranty-card-wrap .warranty-content,
+    .foooter-wrapper .footer-wrap-section .footer-section {
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width:500px) {
+    .foooter-wrapper .footer-wrap-section .footer-section {
+        width: 100%;
     }
 }

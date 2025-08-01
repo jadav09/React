@@ -1,0 +1,41 @@
+{
+    "Petclothing": [
+        {
+            "images": "src/images/item1.jpg",
+            "title": "T-shirts",
+            "rate": "",
+            "price": "$18",
+            "perdiscount": "-18%"
+        },
+        {
+            "images": "src/images/item1.jpg",
+            "title": "Hoodies",
+            "rate": "",
+            "price": "$18",
+            "perdiscount": "-18%"
+        },
+        {
+            "images": "src/images/item1.jpg",
+            "title": "Sweaters",
+            "rate": "",
+            "price": "$18",
+            "perdiscount": "-18%"
+        },
+        {
+            "images": "src/images/item1.jpg",
+            "title": "",
+            "rate": "",
+            "price": "$18",
+            "perdiscount": "-18%"
+        }
+    ],
+    "petfoods": [
+        {
+            "images": "src/images/item1.jpg",
+            "title": "Hoodies",
+            "rate": "",
+            "price": "$18",
+            "perdiscount": "-18%"
+        }
+    ]
+}

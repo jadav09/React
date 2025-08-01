@@ -1,74 +1,76 @@
-import React from 'react';
 import header_logo from "../src/images/logo.png"
+import AddtoCart from "./componets/AddtoCart";
 
 const Header = () => {
     return (
- <div className="header-content-wrap">
+        <div className="header-content-wrap">
 
-        <div className="container">
-            <div className="header">
 
-                <div className="header-logo">
-                    <a href=""><img src={header_logo} alt="" /></a>
-                </div>
 
-                <div className="search">
-                    <input className="form-control" type="text" placeholder="Search for more than 10,000 products" />
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                        <path fill="currentColor" d="M21.71 20.29L18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a1 1 0 0 0 1.42 0a1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 7-7a7 7 0 0 1-7 7Z"></path>
-                    </svg>
-                </div>
+            <div className="container">
+                <div className="header">
 
-                <div className="contact-number">
-
-                    <div>
-                        <p>Phone</p>
-                        <a href="tel:+919104181053" >  <h5>+919104181053</h5></a>
+                    <div className="header-logo">
+                        <a href=""><img src={header_logo} alt="" /></a>
                     </div>
 
-                    <div>
-                        <p>Email</p>
-                        <a href="mailto:jadavdharmesh009@gmail.com" ><h5>jadavdharmesh009@gmail.com</h5></a>
+                    <div className="search">
+                        <input className="form-control" type="text" placeholder="Search for more than 10,000 products" />
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M21.71 20.29L18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a1 1 0 0 0 1.42 0a1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 7-7a7 7 0 0 1-7 7Z"></path>
+                        </svg>
+                    </div>
+
+                    <div className="contact-number">
+
+                        <div>
+                            <p>Phone</p>
+                            <a href="tel:+919104181053" >  <h5>+919104181053</h5></a>
+                        </div>
+
+                        <div>
+                            <p>Email</p>
+                            <a href="mailto:jadavdharmesh009@gmail.com" ><h5>jadavdharmesh009@gmail.com</h5></a>
+                        </div>
+
                     </div>
 
                 </div>
 
             </div>
 
-        </div>
+            <div className='container-fluid'></div>
 
-        <div className='container-fluid'></div>
+            <div className='container'>
 
-        <div className='container'>
-
-            <nav className="navbar navbar-expand-lg">
-                {/* <div className="container-fluid"> */}
+                <nav className="navbar navbar-expand-lg">
+                    {/* <div className="container-fluid"> */}
 
                     <div className=" nav-icon d-lg-none">
 
-                                <a data-toggle="tooltip" data-placement="top" title="User">
-                                    <svg width="24" height="24" viewBox="0 0 48 48"><g fill="currentColor"><path d="M6 36c0-4.965 11.993-8 18-8c6.008 0 18 3.035 18 8v6H6z"></path><path fill-rule="evenodd" d="M24 26c5.523 0 10-4.477 10-10S29.523 6 24 6s-10 4.477-10 10s4.477 10 10 10" clip-rule="evenodd"></path></g></svg>
-                                </a>
+                        <a data-toggle="tooltip" data-placement="top" title="User">
+                            <svg width="24" height="24" viewBox="0 0 48 48"><g fill="currentColor"><path d="M6 36c0-4.965 11.993-8 18-8c6.008 0 18 3.035 18 8v6H6z"></path><path fillRule="evenodd" d="M24 26c5.523 0 10-4.477 10-10S29.523 6 24 6s-10 4.477-10 10s4.477 10 10 10" clipRule="evenodd"></path></g></svg>
+                        </a>
 
 
-                                <a data-toggle="tooltip" data-placement="top" title="Wishlist">
+                        <a data-toggle="tooltip" data-placement="top" title="Wishlist">
 
-                                    <svg width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 21.35l-1.45-1.32C5.4 15.36 2 12.27 2 8.5C2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53z"></path></svg>
-                                </a>
+                            <svg width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 21.35l-1.45-1.32C5.4 15.36 2 12.27 2 8.5C2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53z"></path></svg>
+                        </a>
 
-                                <a data-toggle="tooltip" data-placement="top" title="add to cart">
-
-
-                                    <svg width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M17 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2M1 2v2h2l3.6 7.59l-1.36 2.45c-.15.28-.24.61-.24.96a2 2 0 0 0 2 2h12v-2H7.42a.25.25 0 0 1-.25-.25q0-.075.03-.12L8.1 13h7.45c.75 0 1.41-.42 1.75-1.03l3.58-6.47c.07-.16.12-.33.12-.5a1 1 0 0 0-1-1H5.21l-.94-2M7 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2"></path></svg>
-                                </a>
-
-                                <a data-toggle="tooltip" data-placement="top" title="Search Products">
+                        <a data-toggle="tooltip" data-placement="top" title="add to cart" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
 
 
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                        <path fill="currentColor" d="M21.71 20.29L18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a1 1 0 0 0 1.42 0a1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 7-7a7 7 0 0 1-7 7Z"></path>
-                                    </svg>
-                                </a>
+                            <svg width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M17 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2M1 2v2h2l3.6 7.59l-1.36 2.45c-.15.28-.24.61-.24.96a2 2 0 0 0 2 2h12v-2H7.42a.25.25 0 0 1-.25-.25q0-.075.03-.12L8.1 13h7.45c.75 0 1.41-.42 1.75-1.03l3.58-6.47c.07-.16.12-.33.12-.5a1 1 0 0 0-1-1H5.21l-.94-2M7 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2"></path></svg>
+                        </a>
+
+                        <a data-toggle="tooltip" data-placement="top" title="Search Products">
+
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M21.71 20.29L18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a1 1 0 0 0 1.42 0a1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 7-7a7 7 0 0 1-7 7Z"></path>
+                            </svg>
+                        </a>
                     </div>
 
                     {/* <a className="navbar-brand" href="#">MySite</a> */}
@@ -100,44 +102,65 @@ const Header = () => {
                             ></button>
                         </div>
                         <div className="offcanvas-body">
-                            <ul class="navbar-nav">
-                                        <li class="nav-item">
-                                            <a class="nav-link active" href="#home">Home</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#shop">Shop</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#blog">Blog</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#">contact</a>
-                                        </li>
-                                    </ul>
+                            <ul className="navbar-nav">
+                                <li className="nav-item">
+                                    <a className="nav-link active" href="#home">Home</a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#shop">Shop</a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#blog">Blog</a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#">contact</a>
+                                </li>
+                            </ul>
 
-                                    <div className="nav-icon">
-                                        <a data-toggle="tooltip" data-placement="top" title="User">
-                                            <svg width="24" height="24" viewBox="0 0 48 48"><g fill="currentColor"><path d="M6 36c0-4.965 11.993-8 18-8c6.008 0 18 3.035 18 8v6H6z"></path><path fill-rule="evenodd" d="M24 26c5.523 0 10-4.477 10-10S29.523 6 24 6s-10 4.477-10 10s4.477 10 10 10" clip-rule="evenodd"></path></g></svg>
-                                        </a>
-
-
-                                        <a data-toggle="tooltip" data-placement="top" title="Wishlistr">
-
-                                            <svg width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 21.35l-1.45-1.32C5.4 15.36 2 12.27 2 8.5C2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53z"></path></svg>
-                                        </a>
-
-                                        <a data-toggle="tooltip" data-placement="top" title="Add to Cart">
+                            <div className="nav-icon">
+                                <a data-toggle="tooltip" data-placement="top" title="User">
+                                    <svg width="24" height="24" viewBox="0 0 48 48"><g fill="currentColor"><path d="M6 36c0-4.965 11.993-8 18-8c6.008 0 18 3.035 18 8v6H6z"></path><path fillRule="evenodd" d="M24 26c5.523 0 10-4.477 10-10S29.523 6 24 6s-10 4.477-10 10s4.477 10 10 10" clipRule="evenodd"></path></g></svg>
+                                </a>
 
 
-                                            <svg width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M17 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2M1 2v2h2l3.6 7.59l-1.36 2.45c-.15.28-.24.61-.24.96a2 2 0 0 0 2 2h12v-2H7.42a.25.25 0 0 1-.25-.25q0-.075.03-.12L8.1 13h7.45c.75 0 1.41-.42 1.75-1.03l3.58-6.47c.07-.16.12-.33.12-.5a1 1 0 0 0-1-1H5.21l-.94-2M7 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2"></path></svg>
-                                        </a>
-                                    </div>
+                                <a data-toggle="tooltip" data-placement="top" title="Wishlistr">
+
+                                    <svg width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 21.35l-1.45-1.32C5.4 15.36 2 12.27 2 8.5C2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53z"></path></svg>
+                                </a>
+
+                                <a data-toggle="tooltip" data-placement="top" title="Add to Cart" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop" className="position-relative">
+
+                                    <svg width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M17 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2M1 2v2h2l3.6 7.59l-1.36 2.45c-.15.28-.24.61-.24.96a2 2 0 0 0 2 2h12v-2H7.42a.25.25 0 0 1-.25-.25q0-.075.03-.12L8.1 13h7.45c.75 0 1.41-.42 1.75-1.03l3.58-6.47c.07-.16.12-.33.12-.5a1 1 0 0 0-1-1H5.21l-.94-2M7 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2"></path></svg>
+
+                                    <span class="position-absolute top-0 start-75 translate-middle badge rounded-pill p-1">
+                                        03
+                                    </span>
+
+
+                                </a>
+
+                            </div>
                         </div>
                     </div>
-                {/* </div> */}
-            </nav>
+                    {/* </div> */}
+                </nav>
 
-        </div>
+
+                {/* Add to cart offcanvase */}
+
+                <div class="offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+                    <div class="offcanvas-header">
+                        {/* <h5 class="offcanvas-title" id="staticBackdropLabel">Offcanvas</h5> */}
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <div>
+                            call the cart
+                        </div>
+                    </div>
+                </div>
+
+            </div>
 
         </div>
     );

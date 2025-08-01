@@ -19,7 +19,9 @@ function SliderDetails({siwper_img,swiper_discount,swiper_banner_text,swiper_ban
                             <h4 className='discount-text'>{swiper_discount}</h4>
                             <h1>{swiper_banner_text} <span>{swiper_banner_span}</span></h1>
                             <a href="">
-                                 <ButtonCustom/>
+                                 <ButtonCustom 
+                                  Button_Name={"Shop Now"}
+                                 />
                             </a>
                         </div>
 
