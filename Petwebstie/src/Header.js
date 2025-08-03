@@ -1,7 +1,32 @@
+import { useEffect, useState } from "react";
 import header_logo from "../src/images/logo.png"
-import AddtoCart from "./componets/AddtoCart";
 
 const Header = () => {
+
+    const [cart, setcart] = useState([])
+
+    useEffect(() => {
+        const Getcard = JSON.parse(localStorage.getItem("AddtoCart"))
+        console.log(Getcard)
+        setcart(Getcard)
+    },[])
+
+
+    const removeCart = (cartId) =>{
+        // console.log("cartId =======>",cartId)
+        const ItemDelet = cart.filter((item)=> {
+            return item.id !== cartId
+        })
+
+        const updatedCart =  localStorage.setItem("AddtoCart",JSON.stringify(ItemDelet))
+
+        const ReupdatedCart = [...updatedCart,cartId]
+        console.log(ReupdatedCart)
+        setcart()
+
+    }
+
+
     return (
         <div className="header-content-wrap">
 
@@ -44,7 +69,6 @@ const Header = () => {
             <div className='container'>
 
                 <nav className="navbar navbar-expand-lg">
-                    {/* <div className="container-fluid"> */}
 
                     <div className=" nav-icon d-lg-none">
 
@@ -73,7 +97,6 @@ const Header = () => {
                         </a>
                     </div>
 
-                    {/* <a className="navbar-brand" href="#">MySite</a> */}
 
                     {/* Toggle button for Offcanvas */}
                     <button
@@ -122,7 +145,6 @@ const Header = () => {
                                     <svg width="24" height="24" viewBox="0 0 48 48"><g fill="currentColor"><path d="M6 36c0-4.965 11.993-8 18-8c6.008 0 18 3.035 18 8v6H6z"></path><path fillRule="evenodd" d="M24 26c5.523 0 10-4.477 10-10S29.523 6 24 6s-10 4.477-10 10s4.477 10 10 10" clipRule="evenodd"></path></g></svg>
                                 </a>
 
-
                                 <a data-toggle="tooltip" data-placement="top" title="Wishlistr">
 
                                     <svg width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 21.35l-1.45-1.32C5.4 15.36 2 12.27 2 8.5C2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53z"></path></svg>
@@ -142,7 +164,6 @@ const Header = () => {
                             </div>
                         </div>
                     </div>
-                    {/* </div> */}
                 </nav>
 
 
@@ -150,12 +171,53 @@ const Header = () => {
 
                 <div class="offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
                     <div class="offcanvas-header">
-                        {/* <h5 class="offcanvas-title" id="staticBackdropLabel">Offcanvas</h5> */}
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
-                        <div>
-                            call the cart
+                        <div className="Addtocart-wrapper">
+                            <div className="cart-title">
+                                <h4>Your Card</h4>
+                                <h4>3</h4>
+
+                            </div>
+
+                            {
+                                cart && cart.map((item) => (
+
+                                    <div className="row align-items-center">
+
+                                        <div className="col-10">
+                                            <div className="cart-data">
+                                                <p>{item.title}</p>
+                                                <p>{item.price}</p>
+                                            </div>
+                                        </div>
+
+                                        <div className="col-2">
+                                            <i className="fa fa-solid fa-trash-can text-danger" onClick={()=>{removeCart(item.id)}}></i>
+                                        </div>
+
+                                    </div>
+                                ))
+
+                            }
+
+                            <div className="cart-total">
+
+                                <p>Titak(USD)</p>
+                                <p>price</p>
+
+                            </div>
+
+                            <a href="">
+                                <div className="check-out-btn">
+                                    <h5>
+                                        Continue to Checkout
+                                    </h5>
+                                </div>
+                            </a>
+
+
                         </div>
                     </div>
                 </div>

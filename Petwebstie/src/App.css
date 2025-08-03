@@ -24,6 +24,7 @@ h1,
 h2,
 h3,
 h4,
+h5,
 p,
 a {
   margin: 0;
@@ -139,8 +140,6 @@ a {
 
 .header-content-wrap .container-fluid {
   border-top: 1px solid #d4d4d4;
-  /* margin:0px 24px; */
-  /* margin-right: 100px; */
 }
 
 .offcanvas-header {
@@ -238,7 +237,6 @@ span.swiper-pagination-bullet-active {
 
 .swiper-detail-wrap.Clearancebanner {
   margin-top: var(--unit100);
-  /* padding: var(--unit100) 0px; */
   background: #F9F3EC;
 }
 
@@ -463,4 +461,76 @@ span.swiper-pagination-bullet-active {
 
 .pet-card-wraper .add-to-cart i {
   display: none;
+}
+
+
+/* add-to-cart-offvanves */
+
+.Addtocart-wrapper
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Addtocart-wrapper .cart-title,
+.Addtocart-wrapper .cart-data,
+.Addtocart-wrapper .cart-total
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.Addtocart-wrapper .cart-title
+{
+  color: var(--primarycolor);
+  margin-bottom: 25px;
+}
+
+.Addtocart-wrapper .cart-data
+{
+padding: 12px;
+margin: 1px;
+border: 1px solid ;
+}
+
+.Addtocart-wrapper .cart-total
+{
+margin-top: 20px;
+font-weight:700;
+}
+
+.Addtocart-wrapper .cart-title :last-child
+{
+  width: 35px;
+  height: 35px;
+  line-height: 40px;
+  border-radius: 35px;
+  text-align: center;
+  color: white;
+  background-color: var(--primarycolor);
+}
+
+.Addtocart-wrapper .cart-data-wrap
+{
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.Addtocart-wrapper .check-out-btn
+{
+  padding: 20px;
+    text-align: center;
+    font-size: 20px;
+    background: var(--primarycolor);
+    border-radius: 8px;
+    color: white;
+    margin-top: 20px;
+}
+
+.Addtocart-wrappe .check-out-btn h5{
+  text-align: center;
 }

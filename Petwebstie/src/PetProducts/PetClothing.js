@@ -5,8 +5,8 @@ import item1 from '../images/item1.jpg'
 function PetClothing() {
 
     // const [cart, SetCart] = useState(JSON.parse(localStorage.getItem("AddToCart")) || [])
-    const [cart, SetCart] = useState([])
-    console.log(cart)
+    // const [cart, SetCart] = useState([])
+    // console.log(cart)
     const Petclothing = [
         {
             "id": 1,
@@ -42,14 +42,13 @@ function PetClothing() {
         }
     ]
 
-    useEffect(() => {
+    // useEffect(() => {
 
-        const storeCart = JSON.parse(localStorage.getItem("AddtoCart")) || []
+    //     const storeCart = JSON.parse(localStorage.getItem("AddtoCart")) || []
 
-        SetCart(storeCart)
+    //     SetCart(storeCart)
 
-    }, [])
-
+    // }, [])
 
 
     const handleAddToCart = (item) => {
@@ -72,11 +71,11 @@ function PetClothing() {
 
 
         // If you're using useState
-        SetCart(updatedCart);
+        // SetCart(updatedCart);
 
         console.log("Cart after adding:", updatedCart);
 
-        localStorage.removeItem("AddtoCart")
+        // localStorage.removeItem("AddtoCart")
     };
 
 
