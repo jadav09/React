@@ -1,12 +1,21 @@
-import React, { useEffect, useState } from 'react'
+import React, {  createContext, useContext, useEffect, useState } from 'react'
 import ButtonCustom from '../componets/ButtonCustom'
 import item1 from '../images/item1.jpg'
+import { MyContext } from '../App'
+
+// const MyContext = createContext()
+
+// console.log(MyContext)
 
 function PetClothing() {
 
-    // const [cart, SetCart] = useState(JSON.parse(localStorage.getItem("AddToCart")) || [])
-    // const [cart, SetCart] = useState([])
+    const {petclothcart,setpetclothCart} = useContext(MyContext)
+
+
+    // const [cart, SetCart] = useState(JSON.parse(localStorage.getItem("AddtoCart")) || [])
+    // console.log("cart============>1",cart)
     // console.log(cart)
+
     const Petclothing = [
         {
             "id": 1,
@@ -42,41 +51,48 @@ function PetClothing() {
         }
     ]
 
-    // useEffect(() => {
+    useEffect(()=>{
 
-    //     const storeCart = JSON.parse(localStorage.getItem("AddtoCart")) || []
+    //   const x =   localStorage.getItem("AddtoCart") || []
+    //   console.log(x)
 
-    //     SetCart(storeCart)
+        // console.log("Cart after adding:", updatedCart);
+        localStorage.removeItem("AddtoCart")
 
-    // }, [])
+    },[])
+
 
 
     const handleAddToCart = (item) => {
 
-        console.log("storedate", item)
-        // Always parse as array — fallback to []
+        // console.log("storedata", item)
         const existingCart = JSON.parse(localStorage.getItem("AddtoCart")) || [];
 
         // Ensure it's actually an array
         const cartArray = Array.isArray(existingCart) ? existingCart : [existingCart];
 
+        console.log(cartArray)
+
+        petclothcart.map((cart) => {
+            if (cart.id === item.id) {
+                return alert("item is alrady exit")
+            }
+
+        }
+        )
+
         // Optional: filter to prevent duplicates
         const filteredCart = cartArray.filter(cartItem => cartItem.id !== item.id);
-
-        // Add the new item
-        const updatedCart = [...filteredCart, item];
-
-        // Save the updated array to localStorage
+        const updatedCart = [...filteredCart, item]
         localStorage.setItem("AddtoCart", JSON.stringify(updatedCart));
 
+        console.log("updatedCart ============>", updatedCart)
+        // SetCart(updatedCart)
+        setpetclothCart(updatedCart)
 
-        // If you're using useState
-        // SetCart(updatedCart);
 
-        console.log("Cart after adding:", updatedCart);
-
-        // localStorage.removeItem("AddtoCart")
     };
+
 
 
     // console.log(existingCart)
@@ -101,19 +117,8 @@ function PetClothing() {
                             <>
                                 <div className='pet-box' key={value.id}>
                                     <div className='pet-img'>
-                                        <img src={value.images} alt=""
-                                        // onError={(e) => {
-                                        //     e.target.src = '/images/fallback.jpg';
-                                        // }}
-
-                                        // onError={(e) => {
-                                        //     console.warn('Image failed to load:', value.images);
-                                        //     e.target.src = '/images/fallback.jpg';
-                                        // }}
-
-                                        />
-                                        {/* {console.log(value.images)} */}
-
+                                        <img src={value.images} alt=""/>
+        
                                     </div>
                                     <h3 className='title'>{value.title}</h3>
                                     <p className='star'>
@@ -141,7 +146,7 @@ function PetClothing() {
                             </>
 
                         )
-                            // console.log(value)
+                            
 
                         )
                     }

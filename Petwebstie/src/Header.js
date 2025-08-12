@@ -1,36 +1,46 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import header_logo from "../src/images/logo.png"
+import { MyContext } from "./App";
+
 
 const Header = () => {
 
-    const [cart, setcart] = useState([])
+    const {petclothcart,setpetclothCart} = useContext(MyContext)
 
-    useEffect(() => {
-        const Getcard = JSON.parse(localStorage.getItem("AddtoCart"))
-        console.log(Getcard)
-        setcart(Getcard)
-    },[])
+    console.log(petclothcart)
 
+    // const [addcart, setaddcart] = useState([])
+
+    // useEffect(() => {
+    
+    //     // localStorage.removeItem("AddtoCart")
+
+    // },[])
 
     const removeCart = (cartId) =>{
-        // console.log("cartId =======>",cartId)
-        const ItemDelet = cart.filter((item)=> {
+        console.log("cartId =======>",cartId)
+        const ItemDelet = petclothcart.filter((item)=> {
             return item.id !== cartId
         })
 
-        const updatedCart =  localStorage.setItem("AddtoCart",JSON.stringify(ItemDelet))
+        console.log(ItemDelet)
 
-        const ReupdatedCart = [...updatedCart,cartId]
-        console.log(ReupdatedCart)
-        setcart()
+        localStorage.setItem("AddtoCart",JSON.stringify(ItemDelet))
+
+        const updatedCart = JSON.parse(localStorage.getItem("AddtoCart"))
+        console.log("updatedCart=>",updatedCart)
+
+        setpetclothCart(updatedCart)
+
+        // const ReupdatedCart = [...updatedCart]
+        // console.log(ReupdatedCart)
+        // setcart()
 
     }
 
 
     return (
         <div className="header-content-wrap">
-
-
 
             <div className="container">
                 <div className="header">
@@ -84,17 +94,16 @@ const Header = () => {
 
                         <a data-toggle="tooltip" data-placement="top" title="add to cart" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
 
-
                             <svg width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M17 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2M1 2v2h2l3.6 7.59l-1.36 2.45c-.15.28-.24.61-.24.96a2 2 0 0 0 2 2h12v-2H7.42a.25.25 0 0 1-.25-.25q0-.075.03-.12L8.1 13h7.45c.75 0 1.41-.42 1.75-1.03l3.58-6.47c.07-.16.12-.33.12-.5a1 1 0 0 0-1-1H5.21l-.94-2M7 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2"></path></svg>
                         </a>
 
                         <a data-toggle="tooltip" data-placement="top" title="Search Products">
 
-
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                 <path fill="currentColor" d="M21.71 20.29L18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a1 1 0 0 0 1.42 0a1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 7-7a7 7 0 0 1-7 7Z"></path>
                             </svg>
                         </a>
+
                     </div>
 
 
@@ -182,7 +191,7 @@ const Header = () => {
                             </div>
 
                             {
-                                cart && cart.map((item) => (
+                                petclothcart && petclothcart.map((item) => (
 
                                     <div className="row align-items-center">
 
@@ -196,7 +205,7 @@ const Header = () => {
                                         <div className="col-2">
                                             <i className="fa fa-solid fa-trash-can text-danger" onClick={()=>{removeCart(item.id)}}></i>
                                         </div>
-
+                                    
                                     </div>
                                 ))
 
