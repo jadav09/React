@@ -1,23 +1,14 @@
-import React, { createContext, useContext, useEffect, useState } from 'react'
 import ButtonCustom from '../componets/ButtonCustom'
+
 import item1 from '../images/item1.jpg'
-import { MyContext } from '../App'
-import { Bounce, toast, ToastContainer } from 'react-toastify'
 
-// const MyContext = createContext()
+function PetToy() {
 
-// console.log(MyContext)
-
-function PetClothing() {
-
-    const { petclothcart, setpetclothCart } = useContext(MyContext)
-
-
-    const Petclothing = [
+    const Petfood = [
         {
             "id": 1,
             "images": item1,
-            "title": "T-shirts",
+            "title": "HappyPaws Nutrition",
             "rate": "",
             "price": "$18.00",
             "perdiscount": "-18%"
@@ -48,79 +39,13 @@ function PetClothing() {
         }
     ]
 
-    useEffect(() => {
-
-        // localStorage.removeItem("AddtoCart")
-
-    }, [])
-
-
-
-    const handleAddToCart = (item) => {
-
-        console.log("storedata", item)
-        // { <ToastyAlert /> }
-
-        const existingCart = JSON.parse(localStorage.getItem("AddtoCart")) || [];
-
-
-        // Ensure it's actually an array
-
-        const cartArray = Array.isArray(existingCart) ? existingCart : [existingCart];
-
-        const filteredCart = cartArray.filter(cartItem => cartItem.id !== item.id);
-        const updatedCart = [...filteredCart, item]
-        localStorage.setItem("AddtoCart", JSON.stringify(updatedCart));
-
-        console.log("updatedCart ============>", updatedCart)
-
-
-        setpetclothCart(updatedCart)
-
-
-
-        const itemExists = petclothcart.find((cart) => cart.id === item.id);
-
-        console.log(itemExists)
-
-        if (itemExists) {
-            toast.warn("Item is already in the cart", {
-                position: "top-right",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: false,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "dark",
-                transition: Bounce,
-            });
-        } else {
-            // Add the item to the cart here if needed
-            toast.success("Item added successfully", {
-                position: "top-right",
-                autoClose: 1000,
-                hideProgressBar: false,
-                closeOnClick: false,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
-                transition: Bounce,
-            });
-        }
-
-    };
-
-
-
-
     return (
+
         <div className='pet-card-wraper'>
             <div className='container'>
 
                 <div className='box-heading'>
-                    <h2>Pet Clothing</h2>
+                    <h2>Pet Toy</h2>
                     <a href="">
                         <ButtonCustom
                             Button_Name={"shop now"}
@@ -131,7 +56,7 @@ function PetClothing() {
                 <div className='box-container'>
 
                     {
-                        Petclothing.map((value) => (
+                        Petfood.map((value) => (
                             <>
                                 <div className='pet-box' key={value.id}>
                                     <div className='pet-img'>
@@ -152,7 +77,7 @@ function PetClothing() {
                                     </p>
                                     <h3><span>{value.price}</span></h3>
                                     <div className='add-to-cart'>
-                                        <ButtonCustom Button_Name={'Add to cart'} handleclick={() => { handleAddToCart(value) }} />
+                                        {/* <ButtonCustom Button_Name={'Add to cart'} handleclick={() => { handleAddToCart(value) }} /> */}
                                         <a href="">
                                             <svg viewBox="0 0 28 28"><path fill="currentColor" d="M14.604 6.193a6.519 6.519 0 1 1 9.509 8.913l-9.58 9.672a.75.75 0 0 1-1.066 0l-9.58-9.672a6.52 6.52 0 0 1-.263-8.892c2.588-2.943 7.17-2.953 9.772-.021l.604.68z"></path></svg>
 
@@ -171,13 +96,14 @@ function PetClothing() {
 
 
                 </div>
-                <ToastContainer />
+                {/* <ToastContainer /> */}
 
 
             </div>
 
         </div>
+
     )
 }
 
-export default PetClothing
+export default PetToy

@@ -1,40 +1,54 @@
 import { useContext, useEffect, useState } from "react";
 import header_logo from "../src/images/logo.png"
 import { MyContext } from "./App";
+import { Bounce, toast } from "react-toastify";
 
 
 const Header = () => {
 
-    const {petclothcart,setpetclothCart} = useContext(MyContext)
+    const { petclothcart, setpetclothCart } = useContext(MyContext)
 
     console.log(petclothcart)
 
     // const [addcart, setaddcart] = useState([])
 
     // useEffect(() => {
-    
+
     //     // localStorage.removeItem("AddtoCart")
 
     // },[])
 
-    const removeCart = (cartId) =>{
-        console.log("cartId =======>",cartId)
-        const ItemDelet = petclothcart.filter((item)=> {
+
+
+
+    const removeCart = (cartId) => {
+        console.log("cartId =======>", cartId)
+        const ItemDelet = petclothcart.filter((item) => {
             return item.id !== cartId
         })
 
         console.log(ItemDelet)
 
-        localStorage.setItem("AddtoCart",JSON.stringify(ItemDelet))
+        localStorage.setItem("AddtoCart", JSON.stringify(ItemDelet))
 
         const updatedCart = JSON.parse(localStorage.getItem("AddtoCart"))
-        console.log("updatedCart=>",updatedCart)
+        console.log("updatedCart=>", updatedCart)
 
         setpetclothCart(updatedCart)
 
-        // const ReupdatedCart = [...updatedCart]
-        // console.log(ReupdatedCart)
-        // setcart()
+        toast.warn("item removed",
+            {
+                position: "top-right",
+                autoClose: 1000,
+                hideProgressBar: false,
+                closeOnClick: false,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                transition: Bounce,
+            })
+
 
     }
 
@@ -92,7 +106,7 @@ const Header = () => {
                             <svg width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 21.35l-1.45-1.32C5.4 15.36 2 12.27 2 8.5C2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53z"></path></svg>
                         </a>
 
-                        <a data-toggle="tooltip" data-placement="top" title="add to cart" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+                        <a href="jadavscript:void(0)" data-toggle="tooltip" data-placement="top" title="add to cart" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
 
                             <svg width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M17 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2M1 2v2h2l3.6 7.59l-1.36 2.45c-.15.28-.24.61-.24.96a2 2 0 0 0 2 2h12v-2H7.42a.25.25 0 0 1-.25-.25q0-.075.03-.12L8.1 13h7.45c.75 0 1.41-.42 1.75-1.03l3.58-6.47c.07-.16.12-.33.12-.5a1 1 0 0 0-1-1H5.21l-.94-2M7 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2"></path></svg>
                         </a>
@@ -159,12 +173,12 @@ const Header = () => {
                                     <svg width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 21.35l-1.45-1.32C5.4 15.36 2 12.27 2 8.5C2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53z"></path></svg>
                                 </a>
 
-                                <a data-toggle="tooltip" data-placement="top" title="Add to Cart" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop" className="position-relative">
+                                <a href="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Add to Cart" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop" className="position-relative">
 
                                     <svg width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M17 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2M1 2v2h2l3.6 7.59l-1.36 2.45c-.15.28-.24.61-.24.96a2 2 0 0 0 2 2h12v-2H7.42a.25.25 0 0 1-.25-.25q0-.075.03-.12L8.1 13h7.45c.75 0 1.41-.42 1.75-1.03l3.58-6.47c.07-.16.12-.33.12-.5a1 1 0 0 0-1-1H5.21l-.94-2M7 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2"></path></svg>
 
-                                    <span class="position-absolute top-0 start-75 translate-middle badge rounded-pill p-1">
-                                        03
+                                    <span className="position-absolute top-0 start-75 translate-middle badge rounded-pill p-1">
+                                        {petclothcart.length}
                                     </span>
 
 
@@ -178,15 +192,15 @@ const Header = () => {
 
                 {/* Add to cart offcanvase */}
 
-                <div class="offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
-                    <div class="offcanvas-header">
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <div className="offcanvas offcanvas-end" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+                    <div className="offcanvas-header">
+                        <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
-                    <div class="offcanvas-body">
+                    <div className="offcanvas-body">
                         <div className="Addtocart-wrapper">
                             <div className="cart-title">
                                 <h4>Your Card</h4>
-                                <h4>3</h4>
+                                <h4>{petclothcart.length}</h4>
 
                             </div>
 
@@ -203,9 +217,9 @@ const Header = () => {
                                         </div>
 
                                         <div className="col-2">
-                                            <i className="fa fa-solid fa-trash-can text-danger" onClick={()=>{removeCart(item.id)}}></i>
+                                            <a href="jadavscript:void(0)"> <i className="fa fa-solid fa-trash-can text-danger" onClick={() => { removeCart(item.id) }}></i></a>
                                         </div>
-                                    
+
                                     </div>
                                 ))
 
@@ -230,6 +244,7 @@ const Header = () => {
                         </div>
                     </div>
                 </div>
+
 
             </div>
 

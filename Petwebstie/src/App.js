@@ -7,15 +7,18 @@ import Clearancebanner from './Clearancebanner';
 import PetImages from './componets/PetImages';
 import Warrontybox from './Warrontybox';
 import Footer from './componets/Footer';
-import PetClothing from './PetProducts/PetClothing.js';
 import { createContext, useContext, useState } from 'react';
+import PetClothing from "./PetProducts/PetClothing";
+import PetFood from './PetProducts/PetFood';
+import PetToy from './PetProducts/PetToy';
+// import PetClothing from './PetProducts/PetClothing.js';
 // import SliderDetails from './SliderDetails';
 
- export const MyContext = createContext("")
+export const MyContext = createContext("")
 
 function App() {
 
-  
+
   const [petclothcart, setpetclothCart] = useState(JSON.parse(localStorage.getItem("AddtoCart")) || [])  // usepetcart item
 
   return (
@@ -29,6 +32,8 @@ function App() {
         <SvgBox />
         <Clearancebanner />
         <PetClothing />
+        <PetFood />
+        <PetToy />
         <PetImages />
         <Warrontybox />
         <Footer />

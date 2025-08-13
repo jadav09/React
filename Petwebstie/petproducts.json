@@ -1,5 +1,5 @@
 {
-    "Petclothing": [
+    "Petclothing1": [
         {
             "images": "src/images/item1.jpg",
             "title": "T-shirts",
@@ -23,7 +23,7 @@
         },
         {
             "images": "src/images/item1.jpg",
-            "title": "",
+            "title": "defalut",
             "rate": "",
             "price": "$18",
             "perdiscount": "-18%"
